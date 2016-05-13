@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Essential Album Ranking Comparisons</title>
+
+	<style type="text/css">
+		html, body {
+			font-family: sans-serif;
+			margin: 0px;
+			padding: 20px;
+			height: 100%;
+		}
+
+		text {
+			font-size: 12px;
+		}
+
+		svg {
+		}
+
+		.dot-893 {
+			fill: #b8a578;
+			color: #b8a578;
+		}
+
+		.dot-spotify {
+			fill: #2ebd59;
+			color: #2ebd59;
+		}
+
+		.dot-rs500 {
+			fill: #be1e1e;
+			color: #be1e1e;
+		}
+	</style>
+</head>
+<body>
+
+<h1>Essential Album Ranking Comparisons</h1>
+<p>
+<button class="sort-by-893 dot-893" onclick="update('893_rank')">Sort by 89.3 Ranking</button>
+<button class="sort-by-spotify dot-spotify" onclick="update('spotify_rank')">Sort by Spotify Popularity Rankling</button>
+<button class="sort-by-rs500 dot-rs500" onclick="update('rs500_rank')">Sort by Rolling Stone 500 Rankling</button>
+<button class="sort-by-rs500" onclick="update('893_spotify')">Sort by closest to Spotify</button>
+<button class="sort-by-rs500" onclick="update('893_rs500')">Sort by closest to Rolling Stone 500</button>
+</p>
+<script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
