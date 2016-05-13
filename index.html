@@ -37,6 +37,14 @@
 <body>
 
 <h1>Essential Album Ranking Comparisons</h1>
+<h3>Spotify Popularity and Rolling Stone 500 Greatest Albums of All Time</h3>
+
+<p>
+<small><strong>Spotify ranking:</strong> I used <a href="https://developer.spotify.com/web-api">Spotify's API</a> to get each album's 'popularity' score (1 to 100; 100 is most popular). I then ordered the albums by popularity and assigned each a ranking of 1 to 852 (41 albums were not available) . According to Spotify, "Album popularity is derived mathematically from track popularity... The popularity of a track is a value between 0 and 100, with 100 being the most popular. The popularity is calculated by algorithm and is based, in the most part, on the total number of plays the track has had and how recent those plays are." </strong></small>
+</p>
+<p>
+<small><strong>Rolling Stone</strong> data is from <a href="https://docs.google.com/spreadsheets/d/10AoG5GsL8ztTfqw4SRDi46Lt6LWzCLCeNYWpqriisXQ/edit#gid=0">this spreadsheet</a></small>
+</p>
 <p>
 <button class="sort-by-893 dot-893" onclick="update('893_rank')">Sort by 89.3 Ranking</button>
 <button class="sort-by-spotify dot-spotify" onclick="update('spotify_rank')">Sort by Spotify Popularity Rankling</button>
