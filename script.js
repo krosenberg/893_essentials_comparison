@@ -63,7 +63,7 @@ d3.csv('result.csv', function(error, rows) {
 		// .attr("height", radius)
 		.attr("cy", v_offset+radius/2)
 		.attr("cx", function(d){
-			return 5 + scale(d['spotify_rank']);
+			return 5 + scale(d['spotify_rank']) + radius/2;
 		});
 
 
@@ -75,7 +75,7 @@ d3.csv('result.csv', function(error, rows) {
 		// .attr("height", radius)
 		.attr("cy", v_offset+radius/2)
 		.attr("cx", function(d){
-			return 5 + scale(d['rs500_rank']);
+			return 5 + scale(d['rs500_rank']) + radius/2;
 		});
 
 
@@ -85,7 +85,6 @@ d3.csv('result.csv', function(error, rows) {
 		.text(function(d) {
 			return d['893_rank'] + ' ' +d.artist + ' – ' + d.album
 		});
-
 });
 
 
@@ -94,11 +93,11 @@ function update(sort_by) {
         .sort(function(a, b) {
         	var val;
         	if (sort_by == "893_spotify") {
-				val = Math.abs((a['893_rank'] || 1000) - (a['spotify_rank'] || 1000)) - Math.abs((b['893_rank'] || 1000) - (b['spotify_rank'] || 1000));
+				val = Math.abs((a['893_rank']) - (a['spotify_rank'] || 10000)) - Math.abs((b['893_rank']) - (b['spotify_rank'] || 10000));
         	} else if (sort_by == "893_rs500") {
-				val = Math.abs((a['893_rank'] || 1000) - (a['rs500_rank'] || 1000)) - Math.abs((b['893_rank'] || 1000) - (b['rs500_rank'] || 1000));
+				val = Math.abs((a['893_rank']) - (a['rs500_rank'] || 10000)) - Math.abs((b['893_rank']) - (b['rs500_rank'] || 10000));
         	} else {
-	        	val = (a[sort_by] || 1000) - (b[sort_by] || 1000);        		
+	        	val = (a[sort_by] || 10000) - (b[sort_by] || 10000);        		
         	}
         	console.log('val');
         	return val
